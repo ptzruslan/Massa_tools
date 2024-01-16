@@ -3,40 +3,40 @@
 <img src="https://avatars.githubusercontent.com/u/92152619?s=200&v=4"  style="float: right;" width="100" height="100"></img>
 </div>
 
-Official documentation:
+Официальная документация Massa node:
 >- [Installing a node](https://docs.massa.net/docs/node/initial)
 
 
-## Hardware Requirements
-### Recommended Hardware Requirements 
-Right now 4 cores and 8 GB of RAM should be enough to run a node, but it might increase in the future.
+## Системные требования
+### Рекомендуемые системные требования
+В данный момент 4 ядра и 8 ГБ оперативной памяти должно быть достаточно для запуска ноды, но в будущем это может измениться.
 
-The balance_predictor script can be run on the same node without any significant additional system resources.
+Скрипт balance_predictor может быть запущен на том же узле без каких-либо существенных дополнительных системных ресурсов.
 
-Author is not responsible for this script. All actions you perform are at your own peril and risk!
+Автор не несет ответственности за этот скрипт. Все действия, которые вы выполняете, вы совершаете на свой страх и риск!
 
-Script tested with Ubuntu 22.04
+Скрипт протестирован на Ubuntu 22.04.
 
-Update packages and Install dependencies
+Обновляем пакеты и устанавливаем зависимости
 
 ~~~bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install pip -y
 ~~~
 
-Check you python version. If >= "Python 3.10.12" - it's ok
+Проверьте свою версию python. Если >= "Python 3.10.12" - все в порядке
 
 ~~~bash
 python3 -V
 ~~~
 
-set your password for massa-client
+Установите свой пароль для massa-клиента
 
 ~~~bash
 passwd=<YOUR_PASSWORD>
 ~~~
 
-Copy and paste this code below in you terminal
+Скопируйте и вставьте этот код ниже в свой терминал
 
 ~~~bash
 tee ~/balance_predictor.py > /dev/null <<EOF
@@ -157,14 +157,14 @@ except Exception as e:
 EOF
 ~~~
 
-Change exec options for balance_predictor.py
+Измените права для запуска balance_predictor.py
 
 ~~~bash
 chmod +x ~/balance_predictor.py
 ~~~
 
 
-Start script in you terminal
+Запустите скрипт в вашем терминале
 
 ~~~bash
 python3 balance_predictor.py
