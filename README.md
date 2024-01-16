@@ -133,7 +133,7 @@ def analyze_and_predict_balance():
                     formatted_time = format_time(time_to_reach)
                     message = f"Текущий баланс: {current_balance}, Предполагаемое время достижения баланса 100: {estimated_time.strftime('%Y-%m-%d %H:%M:%S')} ({formatted_time})"
                     
-                    # Логирование и вывод в консоль раз в минуту
+                    # Логирование и вывод в консоль раз в 5 минут
                     if (datetime.now() - last_logged_time).total_seconds() >= 300:
                         print(message)
                         logging.info(message)
